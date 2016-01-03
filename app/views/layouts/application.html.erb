@@ -3,7 +3,7 @@
 <head>
   <title>Developer-Match</title></title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag "https://js.stripe.com/v2/", type: 'text/javascript' %>
+  <%= javascript_include_tag "https://js.stripe.com/v2/", type: 'text/javascript'  %>
   <%= javascript_include_tag 'application' %>
   <%= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %>
   <%= csrf_meta_tags %>
@@ -18,12 +18,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to root_path, class: 'navbar-brand' do%>
+      <%= link_to root_path, class: 'navbar-brand' do %>
       <!--<i class="fa fa-users navbar-brand"></i>-->
       <i class="fa fa-users"></i>
       Developer-Match
-     <!--<%= link_to 'Developer-Match', root_path, class: 'navbar-brand' %>-->
-     <% end %>
+      <% end %>
       </div>
     <div class="collapse navbar-collapse" id="main-nav-collapse">
       
@@ -32,7 +31,6 @@
           <%= link_to "Sign_Out", destroy_user_session_path, class: 'btn btn-danger navbar-btn', method: :delete %>
         <% else %>
           <%= link_to "Log In", new_user_session_path, class: 'btn btn-primary navbar-btn', method: :get %>
-          <!--<%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-success navbar-btn', method: :get %>-->
         <% end %>
       </div>
       
